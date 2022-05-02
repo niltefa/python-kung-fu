@@ -37,8 +37,8 @@ def is_permutation(word, another):
 
 
     # The last thing we have left is to put a "for" that looks 
-    # at the two words letter by letter and see if they have the same letters.
-    # If it doesn't exist, we know it's not a permutation
+    # at the two words letter by letter and if one of theam are diferents
+    # we know it's not a permutation
     for x in range(long_word):
         if (sorted_word[x] != sorted_another[x]):
             return False
