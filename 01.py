@@ -13,11 +13,18 @@ lists or dictionaries). You can use any function in the standard library. """
 import unittest
 
 def all_unique(word):
+    
+    # First of all it is necessary to put all the words 
+    # in lower case. Since A!=a, and precisely we want A=a.
     word = word.lower()
 
+    # If there is only one character we know that it will be unique.
     if len(word)==1:
       return True
     
+    # Here what I do is take the first character and compare it with all the others, 
+    # then I take the second character and I compare it with the others... If at some 
+    # point there are two the same, it means that not all the characters are different.
     for x in range(len(word)):
       for y in range(x + 1, len(word)):
         if word[x] == word[y]:
