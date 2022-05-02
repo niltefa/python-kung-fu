@@ -12,7 +12,19 @@ all the elements. You are not allowed to use neither a for nor a while loop. """
 import unittest
 
 def product(numbers):
-    pass # place magic here
+    numbers = list(numbers)
+    # Ok, so if it's not possible to use a time, we'll use "la forma recursiva (in Catalan)".
+    if len(numbers)==0:
+        return 1
+    if len(numbers)==1:
+        return numbers[0]
+    else:
+        result = numbers[0] * numbers[1]
+        numbers[1] = result
+        del numbers[0]
+        return product(numbers)
+
+
 
 class ProductTests(unittest.TestCase):
 
