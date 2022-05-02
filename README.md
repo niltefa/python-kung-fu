@@ -1,2 +1,2 @@
-# python-kung-fu
-Desafíos de Python Kung Fu
+# Soluciones - python-kung-fu
+soluciones de los desafíos de Python Kung Fu
