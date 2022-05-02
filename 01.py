@@ -13,7 +13,17 @@ lists or dictionaries). You can use any function in the standard library. """
 import unittest
 
 def all_unique(word):
-    pass # place magic here
+    word = word.lower()
+
+    if len(word)==1:
+      return True
+    
+    for x in range(len(word)):
+      for y in range(x + 1, len(word)):
+        if word[x] == word[y]:
+          return False
+    
+    return True
 
 class AllUniqueTests(unittest.TestCase):
 
